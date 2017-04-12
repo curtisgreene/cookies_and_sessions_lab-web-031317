@@ -1,0 +1,13 @@
+<h1>Welcome to the Worst Online Store in the World</h1>
+<h3>Current Cart</h3>
+<ul>
+  <% @cart.each do |item| %>
+  <li><%= item %></li>
+  <% end %>
+</ul>
+<h3>Add new products to the cart</h3>
+<%= form_tag add_product_path do%>
+<%= label_tag :product %>
+<%= text_field_tag :product %>
+<%= submit_tag "add to cart" %>
+<% end %>
